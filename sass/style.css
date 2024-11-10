@@ -34,6 +34,9 @@ main {
   min-height: 100vh;
   background: hsl(185, 41%, 84%);
 }
+main h1 {
+  color: hsl(186, 14%, 43%);
+}
 main #main-section {
   background: hsl(0, 0%, 100%);
   max-width: 26.25rem;
