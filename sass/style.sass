@@ -119,3 +119,18 @@ main
 
   a
     color: hsl(228, 45%, 44%)
+
+@media (min-width: 40em)
+  main
+    #main-section
+      @include display-flex($direction:row)
+      max-width: unset
+      gap: px-rem(25)
+      margin-top: px-rem(30)
+
+      #tip-percent
+        grid-template-columns: repeat(3, 1fr)
+
+      .green-section
+        button
+          margin-top: px-rem(180)

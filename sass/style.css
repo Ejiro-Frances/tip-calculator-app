@@ -134,4 +134,22 @@ main #main-section .green-section button {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 40em) {
+  main #main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: unset;
+    gap: 1.5625rem;
+    margin-top: 1.875rem;
+  }
+  main #main-section #tip-percent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main #main-section .green-section button {
+    margin-top: 11.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */
