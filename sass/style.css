@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 85%;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: hsl(185, 41%, 84%);
+}
+main #main-section {
+  background: hsl(0, 0%, 100%);
+  max-width: 26.25rem;
+  border-radius: 0.9375rem;
+  padding: 1rem;
+}
+main #main-section .result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  padding: 0.625rem;
+  margin-bottom: 1.5625rem;
+  border-radius: 0.625rem;
+}
+main #main-section .result-container .dollar-sign {
+  opacity: 0.5;
+}
+main #main-section .big-num {
+  font-size: 1.625rem;
+  font-weight: 900;
+}
+main #main-section .p-tip {
+  margin-bottom: 0.9375rem;
+}
+main #main-section #tip-percent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9375rem;
+}
+main #main-section #tip-percent li {
+  background: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.3125rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.625rem;
+  text-align: center;
+}
+main #main-section #tip-percent li:hover {
+  background: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+main #main-section #tip-percent .custom {
+  background: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+main #main-section .num-people {
+  margin: 1.5625rem 0 0.9375rem;
+}
+main #main-section input {
+  outline: none;
+  border: none;
+  background: inherit;
+}
+main #main-section .green-section {
+  background: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.25rem;
+  border-radius: 0.9375rem;
+}
+main #main-section .green-section .tip-n-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 1.25rem;
+}
+main #main-section .green-section .tip-n-total p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #main-section .green-section .tip-n-total p span {
+  color: hsl(189, 41%, 97%);
+}
+main #main-section .green-section .tip-n-total .amount {
+  color: hsl(172, 67%, 45%);
+  font-size: 1.875rem;
+}
+main #main-section .green-section button {
+  border: none;
+  outline: none;
+  background: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  min-width: 21.875rem;
+  text-transform: uppercase;
+  padding: 0.625rem 1rem;
+  border-radius: 0.3125rem;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+@use 'sass:math'
+// choose a base font
+$base-font-size: 16
+
+// write a function to convert font
+@function px-rem($px-value)
+  @return math.div($px-value, $base-font-size)*1rem
+
+=remify($properties...)
+  @each $property, $value in $properties
+    #{$property}: px-rem($value)
+
+//Font size (form inputs): 24px
+
+//border-radius
+$br-ss: px-rem(5)
+$br-small: px-rem(10)
+$br: px-rem(15)
+
+//padding for small(s) and medium(m)
+$pds: px-rem(10)
+$pdm: px-rem(16)
+$pdb: px-rem(20)
+
+//font
+$num: px-rem(26)

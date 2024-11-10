@@ -1,0 +1,121 @@
+@import "./utils/_font.sass"
+@import "./utils/_colors.sass"
+@import "./utils/_mixins.sass"
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+
+html
+  font-size: 85%
+
+body
+  font-family: "Space Mono", monospace
+  font-weight: 400
+  font-size: px-to-rem(16)
+  font-weight: 500
+  text-decoration: none
+
+p
+  font-size: px-rem(18)
+
+main
+  @include display-flex
+  min-height: 100vh
+  background: $light-grayish-cyan
+
+  #main-section
+    background: $white
+    max-width: px-rem(420)
+    border-radius: $br
+    padding: $pdm
+
+    .result-container
+      @include flex-between
+      background: $very-light-grayish-cyan
+      color: $very-dark-cyan
+      padding: $pds
+      margin-bottom: px-rem(25)
+      border-radius: $br-small
+
+      .dollar-sign
+        opacity: 0.5
+
+    .big-num
+      font-size: $num
+      font-weight: 900
+ 
+    .p-tip
+      margin-bottom: px-rem(15)
+
+    #tip-percent
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: px-rem(15)
+
+      li 
+        background: $very-dark-cyan
+        color: $white
+        border-radius: $br-ss
+        padding: $pds $pdb
+        font-size: $num
+        text-align: center
+        
+        &:hover
+          background: $strong-cyan
+          color: $very-dark-cyan
+
+      .custom
+        background: $very-light-grayish-cyan
+        color: $very-dark-cyan
+
+    .num-people
+      margin: px-rem(25) 0 px-rem(15)
+
+    input
+      outline: none
+      border: none 
+      background: inherit
+
+    .green-section
+      background: $very-dark-cyan
+      color: $white
+      padding: $pdb
+      border-radius: $br
+
+      .tip-n-total
+        @include flex-between
+        padding-bottom: $pdb
+
+        p
+          @include display-flex
+          span
+            color: $very-light-grayish-cyan
+
+        .amount
+          color: $strong-cyan
+          font-size: px-rem(30)
+
+      button
+        border: none
+        outline: none
+        background: $strong-cyan
+        color: $very-dark-cyan
+        font-weight: 700
+        min-width: px-rem(350)
+        text-transform: uppercase
+        padding:  $pds $pdm
+        border-radius: $br-ss
+
+.attribution 
+  font-size: px-rem(11)
+  text-align: center
+
+  a
+    color: hsl(228, 45%, 44%)
