@@ -17,8 +17,8 @@ This Tip Calculator App allows users to quickly calculate the tip amount and the
 
 ### Demo
 
-- Solution URL: [Add solution URL here](https://github.com/Ejiro-Frances/tip-calculator-app.git)
-- Live Site URL: [Add live site URL here](https://tip-calculator-app-blush-ten.vercel.app/)
+- View Solution by clicking [here](https://github.com/Ejiro-Frances/tip-calculator-app.git)
+- View Live Site [here](https://tip-calculator-app-blush-ten.vercel.app/)
 
 ## Contributing
 
