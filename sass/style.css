@@ -10,20 +10,36 @@ ul {
   list-style: none;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number] {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+}
+
 html {
   font-size: 85%;
 }
 
 body {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
+  font-family: "Space Mono", monospace, sans serif;
   font-size: px-to-rem(16);
   font-weight: 500;
   text-decoration: none;
+  background: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
 }
 
 main {
@@ -31,11 +47,14 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
-  background: hsl(185, 41%, 84%);
+  min-height: 90vh;
 }
 main h1 {
   color: hsl(186, 14%, 43%);
+  letter-spacing: 0.3em;
+  font-size: 1.4375rem;
+  font-weight: 600;
+  margin-bottom: 1.5625rem;
 }
 main #main-section {
   background: hsl(0, 0%, 100%);
@@ -50,16 +69,36 @@ main #main-section .result-container {
   flex-direction: row;
   background: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
-  padding: 0.625rem;
+  padding-left: 1rem;
+  margin-top: 0.3125rem;
+  border: 2px solid hsl(0, 0%, 100%);
   margin-bottom: 1.5625rem;
-  border-radius: 0.625rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
 }
-main #main-section .result-container .dollar-sign {
-  opacity: 0.5;
+main #main-section .result-container:hover {
+  border: 2px solid hsl(172, 67%, 45%);
 }
-main #main-section .big-num {
-  font-size: 1.625rem;
-  font-weight: 900;
+main #main-section .result-container img {
+  max-width: 0.5625rem;
+}
+main #main-section .result-container input {
+  outline: none;
+  border: none;
+  background: inherit;
+  text-align: right;
+  padding: 0.625rem;
+  cursor: pointer;
+}
+main #main-section .result-container input::-moz-placeholder {
+  font-size: 1.5rem;
+  font-weight: 750;
+  color: hsl(183, 100%, 15%);
+}
+main #main-section .result-container input::placeholder {
+  font-size: 1.5rem;
+  font-weight: 750;
+  color: hsl(183, 100%, 15%);
 }
 main #main-section .p-tip {
   margin-bottom: 0.9375rem;
@@ -71,27 +110,63 @@ main #main-section #tip-percent {
 }
 main #main-section #tip-percent li {
   background: hsl(183, 100%, 15%);
-  color: hsl(0, 0%, 100%);
+  color: hsl(189, 41%, 97%);
   border-radius: 0.3125rem;
   padding: 0.625rem 1.25rem;
-  font-size: 1.625rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   text-align: center;
 }
 main #main-section #tip-percent li:hover {
+  color: hsl(183, 100%, 15%);
   background: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
 }
-main #main-section #tip-percent .custom {
+main #main-section #tip-percent li:last-child {
   background: hsl(189, 41%, 97%);
-  color: hsl(183, 100%, 15%);
+  border: 2px solid hsl(189, 41%, 97%);
+  padding: 0;
 }
-main #main-section .num-people {
-  margin: 1.5625rem 0 0.9375rem;
+main #main-section #tip-percent li:last-child:hover {
+  border: 2px solid hsl(172, 67%, 45%);
 }
-main #main-section input {
+main #main-section #tip-percent input {
+  background: hsl(189, 41%, 97%);
+  width: 100%;
+  height: 100%;
+  text-align: right;
   outline: none;
   border: none;
-  background: inherit;
+  padding-right: 0.625rem;
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+  font-size: inherit;
+}
+main #main-section #tip-percent input::-moz-placeholder {
+  font-size: inherit;
+  font-weight: 750;
+  color: hsl(183, 100%, 15%);
+}
+main #main-section #tip-percent input::placeholder {
+  font-size: inherit;
+  font-weight: 750;
+  color: hsl(183, 100%, 15%);
+}
+main #main-section #people-sect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+main #main-section #people-sect .num-people {
+  margin: 1.5625rem 0 0.9375rem;
+}
+main #main-section #people-sect #error-message {
+  font-size: 0.875rem;
+  color: red;
+  opacity: 0.8;
+}
+main #main-section #people-input.active {
+  border-color: red;
 }
 main #main-section .green-section {
   background: hsl(183, 100%, 15%);
@@ -107,17 +182,17 @@ main #main-section .green-section .tip-n-total {
   padding-bottom: 1.25rem;
 }
 main #main-section .green-section .tip-n-total p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  font-weight: 900;
+  color: hsl(185, 41%, 84%);
 }
-main #main-section .green-section .tip-n-total p span {
-  color: hsl(189, 41%, 97%);
+main #main-section .green-section .tip-n-total span {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.75rem;
 }
 main #main-section .green-section .tip-n-total .amount {
   color: hsl(172, 67%, 45%);
   font-size: 1.875rem;
+  font-weight: 800;
 }
 main #main-section .green-section button {
   border: none;
@@ -129,6 +204,10 @@ main #main-section .green-section button {
   text-transform: uppercase;
   padding: 0.625rem 1rem;
   border-radius: 0.3125rem;
+}
+main #main-section .green-section button:hover {
+  cursor: pointer;
+  background: hsl(185, 41%, 84%);
 }
 
 .attribution {
@@ -145,9 +224,9 @@ main #main-section .green-section button {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    max-width: unset;
+    max-width: 55rem;
     gap: 1.5625rem;
-    margin-top: 1.875rem;
+    padding: 1.25rem;
   }
   main #main-section #tip-percent {
     grid-template-columns: repeat(3, 1fr);

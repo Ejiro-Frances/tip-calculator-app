@@ -28,35 +28,47 @@
       <section id="main-section">
         <article>
           <p>Bill</p>
-          <div class="result-container">
+          <form class="result-container">
             <img src="./images/icon-dollar.svg" alt="dollar sign" />
-            <p class="big-num">142.55</p>
-          </div>
+            <input type="number" placeholder="142.55" id="customer-bill" />
+            <!-- <p class="big-num">142.55</p> -->
+          </form>
           <p class="p-tip">Select Tip %</p>
           <ul id="tip-percent">
-            <li>5%</li>
-            <li>10%</li>
-            <li>15%</li>
-            <li>25%</li>
-            <li>50%</li>
-            <li class="custom">Custom</li>
+            <li class="five">5%</li>
+            <li class="ten">10%</li>
+            <li class="fifteen">15%</li>
+            <li class="twenty-five">25%</li>
+            <li class="fifty">50%</li>
+            <li>
+              <input type="number" placeholder="Custom" id="custom" />
+            </li>
           </ul>
-
-          <p class="num-people">Number of People</p>
-          <div class="result-container">
-            <img src="./images/icon-person.svg" alt="" />
-            <p class="big-num">5</p>
+          <div id="people-sect">
+            <p class="num-people">Number of People</p>
+            <span id="error-message">Can't be zero</span>
           </div>
+          <form class="result-container" id="people-input">
+            <img src="./images/icon-person.svg" alt="" />
+            <!-- <p class="big-num">5</p> -->
+            <input type="number" placeholder="5" />
+          </form>
         </article>
         <!-- next -->
         <article class="green-section">
           <div class="tip-n-total">
-            <p>Tip Amount <span>/ person</span></p>
-            <p class="amount">$4.27</p>
+            <div>
+              <p id="tip-amount">Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <p class="amount amount-per-person">$4.27</p>
           </div>
           <!-- next -->
           <div class="tip-n-total">
-            <p>Total <span>/ person</span></p>
+            <div>
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
             <p class="amount">$32.79</p>
           </div>
           <button>Reset</button>
@@ -74,5 +86,6 @@
         >Ejiro Frances</a
       >
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

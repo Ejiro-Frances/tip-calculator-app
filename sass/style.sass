@@ -12,26 +12,43 @@
 ul
   list-style: none
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+//for forefox
+input[type="number"]
+  -moz-appearance: textfield
+
+input[type="number"]
+  font-size: $num
+  font-weight:700
+  color: $very-dark-cyan
+
 html
   font-size: 85%
 
 body
-  font-family: "Space Mono", monospace
-  font-weight: 400
+  font-family: "Space Mono", monospace, sans serif
   font-size: px-to-rem(16)
   font-weight: 500
   text-decoration: none
+  background: $light-grayish-cyan
+  color: $very-dark-cyan
 
 p
-  font-size: px-rem(18)
+  font-size: px-rem(14)
 
 main
   @include display-flex
-  min-height: 100vh
-  background: $light-grayish-cyan
+  min-height: 90vh
  
   h1
     color: $dark-grayish-cyan
+    letter-spacing: .3em
+    font-size: px-rem(23)
+    font-weight: 600
+    margin-bottom: px-rem(25)
 
   #main-section
     background: $white
@@ -43,16 +60,32 @@ main
       @include flex-between
       background: $very-light-grayish-cyan
       color: $very-dark-cyan
-      padding: $pds
+      padding-left: $pdm
+      margin-top: px-rem(5)
+      border: 2px solid $white
       margin-bottom: px-rem(25)
-      border-radius: $br-small
+      border-radius: $br-ss
+      cursor: pointer
+      
+      &:hover
+        border: 2px solid $strong-cyan
 
-      .dollar-sign
-        opacity: 0.5
+      img
+        max-width: px-rem(9)
 
-    .big-num
-      font-size: $num
-      font-weight: 900
+      input
+        outline: none
+        border: none 
+        background: inherit
+        text-align: right
+        padding: $pds
+        cursor: pointer
+
+        &::placeholder
+          font-size: $num
+          font-weight: 750
+          color: $very-dark-cyan
+          
  
     .p-tip
       margin-bottom: px-rem(15)
@@ -64,27 +97,56 @@ main
 
       li 
         background: $very-dark-cyan
-        color: $white
+        color: $very-light-grayish-cyan
         border-radius: $br-ss
         padding: $pds $pdb
-        font-size: $num
+        font-size: px-rem(20)
+        font-weight: 600
         text-align: center
         
         &:hover
-          background: $strong-cyan
           color: $very-dark-cyan
-
-      .custom
+          background: $strong-cyan
+        
+      li:last-child
         background: $very-light-grayish-cyan
+        border: 2px solid $very-light-grayish-cyan
+        padding: 0
+
+        &:hover
+          border: 2px solid $strong-cyan
+
+      input
+        background: $very-light-grayish-cyan
+        width:100%
+        height: 100%
+        text-align: right
+        outline: none
+        border: none
+        padding-right: $pds
+        cursor: pointer
         color: $very-dark-cyan
+        font-size: inherit
 
-    .num-people
-      margin: px-rem(25) 0 px-rem(15)
+        &::placeholder
+          font-size: inherit
+          font-weight: 750
+          color: $very-dark-cyan
+       
+    #people-sect
+      @include flex-between
 
-    input
-      outline: none
-      border: none 
-      background: inherit
+      .num-people
+        margin: px-rem(25) 0 px-rem(15)
+
+      #error-message
+        font-size: px-rem(14)
+        color: red
+        opacity: 0.8
+
+    #people-input
+      &.active
+        border-color: red
 
     .green-section
       background: $very-dark-cyan
@@ -97,13 +159,17 @@ main
         padding-bottom: $pdb
 
         p
-          @include display-flex
-          span
-            color: $very-light-grayish-cyan
+          font-weight: 900
+          color: $light-grayish-cyan
+        
+        span
+          color: $grayish-cyan
+          font-size: px-rem(12)
 
         .amount
           color: $strong-cyan
           font-size: px-rem(30)
+          font-weight: 800
 
       button
         border: none
@@ -116,6 +182,10 @@ main
         padding:  $pds $pdm
         border-radius: $br-ss
 
+        &:hover
+          cursor: pointer
+          background: $light-grayish-cyan
+
 .attribution 
   font-size: px-rem(11)
   text-align: center
@@ -127,9 +197,9 @@ main
   main
     #main-section
       @include display-flex($direction:row)
-      max-width: unset
+      max-width: 55rem
       gap: px-rem(25)
-      margin-top: px-rem(30)
+      padding: $pdb
 
       #tip-percent
         grid-template-columns: repeat(3, 1fr)
