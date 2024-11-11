@@ -24,34 +24,44 @@
   </head>
   <body>
     <main>
-      <h1>SPLI <br />TTER</h1>
+      <h1 id="logo">SPLI <br />TTER</h1>
       <section id="main-section">
         <article>
-          <p>Bill</p>
+          <p class="bill">
+            Bill <span class="bill-error hide">Please input an amount</span>
+          </p>
           <form class="result-container">
             <img src="./images/icon-dollar.svg" alt="dollar sign" />
-            <input type="number" placeholder="142.55" id="customer-bill" />
-            <!-- <p class="big-num">142.55</p> -->
+            <input
+              type="number"
+              placeholder="Enter your bill"
+              id="customer-bill"
+            />
           </form>
+
           <p class="p-tip">Select Tip %</p>
           <ul id="tip-percent">
-            <li class="five">5%</li>
-            <li class="ten">10%</li>
-            <li class="fifteen">15%</li>
-            <li class="twenty-five">25%</li>
-            <li class="fifty">50%</li>
+            <li onclick="calculateTip(5)">5%</li>
+            <li onclick="calculateTip(10)">10%</li>
+            <li onclick="calculateTip(15)">15%</li>
+            <li onclick="calculateTip(25)">25%</li>
+            <li onclick="calculateTip(50)">50%</li>
             <li>
-              <input type="number" placeholder="Custom" id="custom" />
+              <input
+                type="number"
+                placeholder="Custom"
+                id="custom"
+                onchange="customTip()"
+              />
             </li>
           </ul>
           <div id="people-sect">
             <p class="num-people">Number of People</p>
-            <span id="error-message">Can't be zero</span>
+            <span class="error-message hide">Can't be zero</span>
           </div>
           <form class="result-container" id="people-input">
             <img src="./images/icon-person.svg" alt="" />
-            <!-- <p class="big-num">5</p> -->
-            <input type="number" placeholder="5" />
+            <input type="number" placeholder="0" id="people-val" />
           </form>
         </article>
         <!-- next -->
@@ -61,7 +71,7 @@
               <p id="tip-amount">Tip Amount</p>
               <span>/ person</span>
             </div>
-            <p class="amount amount-per-person">$4.27</p>
+            <h1 class="amount" id="amount-per-person">$0.00</h1>
           </div>
           <!-- next -->
           <div class="tip-n-total">
@@ -69,7 +79,7 @@
               <p>Total</p>
               <span>/ person</span>
             </div>
-            <p class="amount">$32.79</p>
+            <h1 class="amount" id="total-amount">$0.00</h1>
           </div>
           <button>Reset</button>
         </article>

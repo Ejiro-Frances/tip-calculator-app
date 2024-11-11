@@ -49,7 +49,7 @@ main {
   flex-direction: column;
   min-height: 90vh;
 }
-main h1 {
+main #logo {
   color: hsl(186, 14%, 43%);
   letter-spacing: 0.3em;
   font-size: 1.4375rem;
@@ -61,6 +61,12 @@ main #main-section {
   max-width: 26.25rem;
   border-radius: 0.9375rem;
   padding: 1rem;
+}
+main #main-section .bill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 main #main-section .result-container {
   display: flex;
@@ -79,6 +85,9 @@ main #main-section .result-container {
 main #main-section .result-container:hover {
   border: 2px solid hsl(172, 67%, 45%);
 }
+main #main-section .result-container.active {
+  border: 2px solid red;
+}
 main #main-section .result-container img {
   max-width: 0.5625rem;
 }
@@ -91,13 +100,13 @@ main #main-section .result-container input {
   cursor: pointer;
 }
 main #main-section .result-container input::-moz-placeholder {
-  font-size: 1.5rem;
-  font-weight: 750;
+  font-size: 1rem;
+  font-weight: 600;
   color: hsl(183, 100%, 15%);
 }
 main #main-section .result-container input::placeholder {
-  font-size: 1.5rem;
-  font-weight: 750;
+  font-size: 1rem;
+  font-weight: 600;
   color: hsl(183, 100%, 15%);
 }
 main #main-section .p-tip {
@@ -160,13 +169,21 @@ main #main-section #people-sect {
 main #main-section #people-sect .num-people {
   margin: 1.5625rem 0 0.9375rem;
 }
-main #main-section #people-sect #error-message {
+main #main-section .bill-error {
   font-size: 0.875rem;
   color: red;
   opacity: 0.8;
 }
+main #main-section .error-message {
+  font-size: 0.875rem;
+  color: red;
+  opacity: 0.8;
+}
+main #main-section .hide {
+  display: none;
+}
 main #main-section #people-input.active {
-  border-color: red;
+  border: 2px solid red;
 }
 main #main-section .green-section {
   background: hsl(183, 100%, 15%);

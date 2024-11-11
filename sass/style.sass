@@ -16,7 +16,7 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button
   -webkit-appearance: none
 
-//for forefox
+//for fire fox
 input[type="number"]
   -moz-appearance: textfield
 
@@ -43,7 +43,7 @@ main
   @include display-flex
   min-height: 90vh
  
-  h1
+  #logo
     color: $dark-grayish-cyan
     letter-spacing: .3em
     font-size: px-rem(23)
@@ -55,6 +55,9 @@ main
     max-width: px-rem(420)
     border-radius: $br
     padding: $pdm
+    
+    .bill
+      @include flex-between
 
     .result-container
       @include flex-between
@@ -70,6 +73,9 @@ main
       &:hover
         border: 2px solid $strong-cyan
 
+      &.active
+        border: 2px solid red
+
       img
         max-width: px-rem(9)
 
@@ -82,11 +88,12 @@ main
         cursor: pointer
 
         &::placeholder
-          font-size: $num
-          font-weight: 750
+          font-size: px-rem(16)
+          font-weight: 600
           color: $very-dark-cyan
           
- 
+          
+    
     .p-tip
       margin-bottom: px-rem(15)
 
@@ -139,14 +146,22 @@ main
       .num-people
         margin: px-rem(25) 0 px-rem(15)
 
-      #error-message
-        font-size: px-rem(14)
-        color: red
-        opacity: 0.8
+    .bill-error
+      font-size: px-rem(14)
+      color: red
+      opacity: 0.8
+      
+    .error-message
+      font-size: px-rem(14)
+      color: red
+      opacity: 0.8
+
+    .hide
+      display: none
 
     #people-input
       &.active
-        border-color: red
+        border: 2px solid red
 
     .green-section
       background: $very-dark-cyan

@@ -1,15 +1,30 @@
-# Frontend Mentor - Tip calculator app
+# Tip Calculator App
+
+This Tip Calculator App allows users to quickly calculate the tip amount and the total bill per person. It was built with the mobile-first workflow, using Semantic HTML, SASS, and JavaScript; it provides a responsive and interactive experience on any screen size.
+
+# Frontend Mentor - Tip calculator app Preview
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
-## The challenge
+### Usage
 
-Your challenge is to build out this tip calculator app and get it looking as close to the design as possible.
+- Enter the bill amount in the input field.
+- Select a tip percentage from the options provided, or enter a custom percentage.
+- Specify the number of people splitting the bill.
+- The app will display:
+  - Total Tip Amount per person
+  - Total Bill Amount per person
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### Demo
 
-Your users should be able to:
+- Solution URL: [Add solution URL here](https://github.com/Ejiro-Frances/tip-calculator-app.git)
+- Live Site URL: [Add live site URL here](https://tip-calculator-app-blush-ten.vercel.app/)
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+## Contributing
+
+Feel free to open issues or submit pull requests with improvements or suggestions.
+
+## Author
+
+- Email: francesejiro@yahoo.com
+- Twitter - [@france_ssa](https://www.x.com/france_ssa)
