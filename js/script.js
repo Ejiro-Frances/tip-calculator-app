@@ -37,8 +37,7 @@ function calculateTip(percentage) {
   // Calculate tip and total amount per person
   const tip = (percentage / 100) * billAmount;
   const tipPerPerson = tip / numberOfPeople;
-  // const totalAmount = billAmount + tipPerPerson / numberOfPeople;
-  const totalAmount = tipPerPerson / numberOfPeople;
+  const totalAmount = (billAmount + tipPerPerson) / numberOfPeople;
 
   // Display the result
   amountPerPersonEl.textContent = `$${tipPerPerson.toFixed(2)}`;
@@ -52,7 +51,8 @@ function customTip() {
 
   // Validate the custom tip input
   if (isNaN(customPercentage) || customPercentage <= 0) {
-    alert("Please enter a valid custom percentage.");
+    billError.classList.remove("hide");
+    // alert("Please enter a valid custom percentage.");
     return;
   }
 
@@ -75,3 +75,4 @@ function resetCalculator() {
   errorMessage.classList.add("hide");
   billError.classList.add("hide");
 }
+button.addEventListener("click", resetCalculator);
