@@ -52,14 +52,14 @@ main
 
   #main-section
     background: $white
-    max-width: px-rem(420)
+    max-width: px-rem(500)
     border-radius: $br
-    padding: $pdm
+    padding: $pdb
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px
     
     .bill
       @include flex-between
-
+ 
     .result-container
       @include flex-between
       background: $very-light-grayish-cyan
@@ -73,6 +73,8 @@ main
       
       &:hover
         border: 2px solid $strong-cyan
+        box-shadow: 0 0 3px $strong-cyan
+        transition: all 0.3s ease-in
 
       &.active
         border: 2px solid red
@@ -92,8 +94,6 @@ main
           font-size: px-rem(16)
           font-weight: 600
           color: $very-dark-cyan
-          
-          
     
     .p-tip
       margin-bottom: px-rem(15)
@@ -115,7 +115,19 @@ main
         &:hover
           color: $very-dark-cyan
           background: $strong-cyan
-        
+          box-shadow: 0 0 5px $very-dark-cyan
+          transition: all 0.1s ease-in
+       
+      .custom-input
+        position: relative
+
+        .percent-symbol
+          position: absolute
+          right: 10px
+          top: 50%
+          transform: translateY(-50%)
+          color: $very-dark-cyan
+
       li:last-child
         background: $very-light-grayish-cyan
         border: 2px solid $very-light-grayish-cyan
@@ -131,7 +143,7 @@ main
         text-align: right
         outline: none
         border: none
-        padding-right: $pds
+        padding-right:25px
         cursor: pointer
         color: $very-dark-cyan
         font-size: inherit
@@ -140,7 +152,8 @@ main
           font-size: inherit
           font-weight: 750
           color: $very-dark-cyan
-       
+          padding-right: 10px
+   
     #people-sect
       @include flex-between
 
@@ -190,7 +203,8 @@ main
       button
         border: none
         outline: none
-        background: $strong-cyan
+        background:$dark-grayish-cyan
+        opacity: 0.5
         color: $very-dark-cyan
         font-weight: 700
         min-width: px-rem(350)
@@ -200,7 +214,10 @@ main
 
         &:hover
           cursor: pointer
-          background: $light-grayish-cyan
+          background: $grayish-cyan
+          opacity: .8
+          box-shadow: 0 0 8px $grayish-cyan
+          transition: all 0.1s ease-in
 
 .attribution 
   font-size: px-rem(11)

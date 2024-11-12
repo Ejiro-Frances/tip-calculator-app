@@ -46,13 +46,14 @@
             <li onclick="calculateTip(15)">15%</li>
             <li onclick="calculateTip(25)">25%</li>
             <li onclick="calculateTip(50)">50%</li>
-            <li>
+            <li class="custom-input">
               <input
                 type="number"
                 placeholder="Custom"
                 id="custom"
                 onchange="customTip()"
               />
+              <span class="percent-symbol">%</span>
             </li>
           </ul>
           <div id="people-sect">

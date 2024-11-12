@@ -58,9 +58,9 @@ main #logo {
 }
 main #main-section {
   background: hsl(0, 0%, 100%);
-  max-width: 26.25rem;
+  max-width: 31.25rem;
   border-radius: 0.9375rem;
-  padding: 1rem;
+  padding: 1.25rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 main #main-section .bill {
@@ -85,6 +85,8 @@ main #main-section .result-container {
 }
 main #main-section .result-container:hover {
   border: 2px solid hsl(172, 67%, 45%);
+  box-shadow: 0 0 3px hsl(172, 67%, 45%);
+  transition: all 0.3s ease-in;
 }
 main #main-section .result-container.active {
   border: 2px solid red;
@@ -130,6 +132,18 @@ main #main-section #tip-percent li {
 main #main-section #tip-percent li:hover {
   color: hsl(183, 100%, 15%);
   background: hsl(172, 67%, 45%);
+  box-shadow: 0 0 5px hsl(183, 100%, 15%);
+  transition: all 0.1s ease-in;
+}
+main #main-section #tip-percent .custom-input {
+  position: relative;
+}
+main #main-section #tip-percent .custom-input .percent-symbol {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: hsl(183, 100%, 15%);
 }
 main #main-section #tip-percent li:last-child {
   background: hsl(189, 41%, 97%);
@@ -146,7 +160,7 @@ main #main-section #tip-percent input {
   text-align: right;
   outline: none;
   border: none;
-  padding-right: 0.625rem;
+  padding-right: 25px;
   cursor: pointer;
   color: hsl(183, 100%, 15%);
   font-size: inherit;
@@ -155,11 +169,13 @@ main #main-section #tip-percent input::-moz-placeholder {
   font-size: inherit;
   font-weight: 750;
   color: hsl(183, 100%, 15%);
+  padding-right: 10px;
 }
 main #main-section #tip-percent input::placeholder {
   font-size: inherit;
   font-weight: 750;
   color: hsl(183, 100%, 15%);
+  padding-right: 10px;
 }
 main #main-section #people-sect {
   display: flex;
@@ -215,7 +231,8 @@ main #main-section .green-section .tip-n-total .amount {
 main #main-section .green-section button {
   border: none;
   outline: none;
-  background: hsl(172, 67%, 45%);
+  background: hsl(186, 14%, 43%);
+  opacity: 0.5;
   color: hsl(183, 100%, 15%);
   font-weight: 700;
   min-width: 21.875rem;
@@ -225,7 +242,10 @@ main #main-section .green-section button {
 }
 main #main-section .green-section button:hover {
   cursor: pointer;
-  background: hsl(185, 41%, 84%);
+  background: hsl(184, 14%, 56%);
+  opacity: 0.8;
+  box-shadow: 0 0 8px hsl(184, 14%, 56%);
+  transition: all 0.1s ease-in;
 }
 
 .attribution {
