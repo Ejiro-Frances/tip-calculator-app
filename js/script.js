@@ -37,7 +37,8 @@ function calculateTip(percentage) {
   // Calculate tip and total amount per person
   const tip = (percentage / 100) * billAmount;
   const tipPerPerson = tip / numberOfPeople;
-  const totalAmount = billAmount + tipPerPerson / numberOfPeople;
+  // const totalAmount = billAmount + tipPerPerson / numberOfPeople;
+  const totalAmount = tipPerPerson / numberOfPeople;
 
   // Display the result
   amountPerPersonEl.textContent = `$${tipPerPerson.toFixed(2)}`;

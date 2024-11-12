@@ -27,4 +27,4 @@ Feel free to open issues or submit pull requests with improvements or suggestion
 ## Author
 
 - Email: francesejiro@yahoo.com
-- Twitter - [@france_ssa](https://www.x.com/france_ssa)
+- Twitter: [@france_ssa](https://www.x.com/france_ssa)
